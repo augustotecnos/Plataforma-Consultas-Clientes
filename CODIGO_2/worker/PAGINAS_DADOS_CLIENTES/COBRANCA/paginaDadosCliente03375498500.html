@@ -1,0 +1,730 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<html>
+ <head>
+  <title>
+   FrmManterAtualizacaoCadastralCliente
+  </title>
+  <meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR"/>
+  <meta content="C#" name="CODE_LANGUAGE"/>
+  <meta content="JavaScript" name="vs_defaultClientScript"/>
+  <meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema"/>
+  <link href="../banese.css" rel="stylesheet" type="text/css"/>
+  <script src="../scripts/jquery-3.6.1.min.js" type="text/javascript">
+  </script>
+  <script src="../scripts/jquery-ui.js" type="text/javascript">
+  </script>
+  <script src="../scripts/Util.js" type="text/javascript">
+  </script>
+  <script src="../scripts/Fabrica.js" type="text/javascript">
+  </script>
+  <style type="text/css">
+   .auto-style1 {
+            height: 28px;
+        }
+  </style>
+ </head>
+ <body>
+  <form action="./FrmManterAtualizacaoCadastralCliente.aspx" id="form1" language="javascript" method="post" name="form1" onsubmit="javascript:return WebForm_OnSubmit();">
+   <input id="__EVENTTARGET" name="__EVENTTARGET" type="hidden" value=""/>
+   <input id="__EVENTARGUMENT" name="__EVENTARGUMENT" type="hidden" value=""/>
+   <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="/wEPDwULLTEyMDYxNDk1ODUPFh4eEGRhdGFSZW5lZ29jaWFjYW8GAAAjg8Xa3QgeBUxvZ2luBQc1OTUxMDYyHgtDZE9wZXJhZG9yYQIDHghpZEFjZXNzbwUkNDJFRjAxMEItNTAxRi00NTA0LTkxMTMtQ0ZGMURBNkJCNEU4HhpGbE9icmlnYXJBZGVzYW9GYXR1cmFFbWFpbGceDk5yQ29udGFDcmVkaXRvAq0XHglOckNwZkNucGoFDjMzNzU0OTg1MDAwMDAwHg5jZE5pdmVsVXN1YXJpbwIBHhJGbE9icmlnYXJBZGVzYW9TbXNnHghDZFBlc3NvYQKtFx4NTnJDb250YUNhcnRhbwUBMB4FTnJDcGYFDjAzMy43NTQuOTg1LTAwHgljZF9wZXNzb2ECrRceEkZsVGVsZWZvbmVBbHRlcmFkb2geC0R0dEVuZGVyZWNvMrocAAEAAAD/////AQAAAAAAAAAMAgAAAE5TeXN0ZW0uRGF0YSwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAABVTeXN0ZW0uRGF0YS5EYXRhVGFibGUDAAAAGURhdGFUYWJsZS5SZW1vdGluZ1ZlcnNpb24JWG1sU2NoZW1hC1htbERpZmZHcmFtAwEBDlN5c3RlbS5WZXJzaW9uAgAAAAkDAAAABgQAAACGFDw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9InV0Zi0xNiI/Pg0KPHhzOnNjaGVtYSB4bWxucz0iIiB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOm1zZGF0YT0idXJuOnNjaGVtYXMtbWljcm9zb2Z0LWNvbTp4bWwtbXNkYXRhIj4NCiAgPHhzOmVsZW1lbnQgbmFtZT0iVGFibGUzIj4NCiAgICA8eHM6Y29tcGxleFR5cGU+DQogICAgICA8eHM6c2VxdWVuY2U+DQogICAgICAgIDx4czplbGVtZW50IG5hbWU9InRwX2VuZGVyZWNvIiB0eXBlPSJ4czpzdHJpbmciIG1zZGF0YTp0YXJnZXROYW1lc3BhY2U9IiIgbWluT2NjdXJzPSIwIiAvPg0KICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJubV9sb2dyYWRvdXJvIiB0eXBlPSJ4czpzdHJpbmciIG1zZGF0YTp0YXJnZXROYW1lc3BhY2U9IiIgbWluT2NjdXJzPSIwIiAvPg0KICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJkc19udW1lcm8iIHR5cGU9InhzOnN0cmluZyIgbXNkYXRhOnRhcmdldE5hbWVzcGFjZT0iIiBtaW5PY2N1cnM9IjAiIC8+DQogICAgICAgIDx4czplbGVtZW50IG5hbWU9ImRzX2NvbXBsZW1lbnRvX2NvbXBsZXRvIiB0eXBlPSJ4czpzdHJpbmciIG1zZGF0YTp0YXJnZXROYW1lc3BhY2U9IiIgbWluT2NjdXJzPSIwIiAvPg0KICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJubV9iYWlycm8iIHR5cGU9InhzOnN0cmluZyIgbXNkYXRhOnRhcmdldE5hbWVzcGFjZT0iIiBtaW5PY2N1cnM9IjAiIC8+DQogICAgICAgIDx4czplbGVtZW50IG5hbWU9ImNkX2NlcCIgdHlwZT0ieHM6aW50IiBtc2RhdGE6dGFyZ2V0TmFtZXNwYWNlPSIiIG1pbk9jY3Vycz0iMCIgLz4NCiAgICAgICAgPHhzOmVsZW1lbnQgbmFtZT0iZHRfdGVtcG9fcmVzaWRlbmNpYSIgdHlwZT0ieHM6ZGF0ZVRpbWUiIG1zZGF0YTp0YXJnZXROYW1lc3BhY2U9IiIgbWluT2NjdXJzPSIwIiAvPg0KICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJkdF9lbmRlcmVjbyIgdHlwZT0ieHM6ZGF0ZVRpbWUiIG1zZGF0YTp0YXJnZXROYW1lc3BhY2U9IiIgbWluT2NjdXJzPSIwIiAvPg0KICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJjZF91ZiIgdHlwZT0ieHM6c3RyaW5nIiBtc2RhdGE6dGFyZ2V0TmFtZXNwYWNlPSIiIG1pbk9jY3Vycz0iMCIgLz4NCiAgICAgICAgPHhzOmVsZW1lbnQgbmFtZT0iZHNfY29tcGxlbWVudG8iIHR5cGU9InhzOnN0cmluZyIgbXNkYXRhOnRhcmdldE5hbWVzcGFjZT0iIiBtaW5PY2N1cnM9IjAiIC8+DQogICAgICAgIDx4czplbGVtZW50IG5hbWU9Im5tX2xvY2FsaWRhZGUiIHR5cGU9InhzOnN0cmluZyIgbXNkYXRhOnRhcmdldE5hbWVzcGFjZT0iIiBtaW5PY2N1cnM9IjAiIC8+DQogICAgICAgIDx4czplbGVtZW50IG5hbWU9ImNkX2xvY2FsaWRhZGUiIHR5cGU9InhzOmludCIgbXNkYXRhOnRhcmdldE5hbWVzcGFjZT0iIiBtaW5PY2N1cnM9IjAiIC8+DQogICAgICAgIDx4czplbGVtZW50IG5hbWU9ImRzX3RpcG9fcmVzaWRlbmNpYSIgdHlwZT0ieHM6c3RyaW5nIiBtc2RhdGE6dGFyZ2V0TmFtZXNwYWNlPSIiIG1pbk9jY3Vycz0iMCIgLz4NCiAgICAgICAgPHhzOmVsZW1lbnQgbmFtZT0iY2RfdGlwb19yZXNpZGVuY2lhIiB0eXBlPSJ4czp1bnNpZ25lZEJ5dGUiIG1zZGF0YTp0YXJnZXROYW1lc3BhY2U9IiIgbWluT2NjdXJzPSIwIiAvPg0KICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJjZF9lbmRlcmVjbyIgdHlwZT0ieHM6aW50IiBtc2RhdGE6dGFyZ2V0TmFtZXNwYWNlPSIiIG1pbk9jY3Vycz0iMCIgLz4NCiAgICAgICAgPHhzOmVsZW1lbnQgbmFtZT0ibm1fY29uZG9taW5pbyIgdHlwZT0ieHM6c3RyaW5nIiBtc2RhdGE6dGFyZ2V0TmFtZXNwYWNlPSIiIG1pbk9jY3Vycz0iMCIgLz4NCiAgICAgICAgPHhzOmVsZW1lbnQgbmFtZT0ibm1fZWRpZmljaW8iIHR5cGU9InhzOnN0cmluZyIgbXNkYXRhOnRhcmdldE5hbWVzcGFjZT0iIiBtaW5PY2N1cnM9IjAiIC8+DQogICAgICAgIDx4czplbGVtZW50IG5hbWU9Im5tX3NhbGEiIHR5cGU9InhzOnN0cmluZyIgbXNkYXRhOnRhcmdldE5hbWVzcGFjZT0iIiBtaW5PY2N1cnM9IjAiIC8+DQogICAgICAgIDx4czplbGVtZW50IG5hbWU9Im5tX2Nvbmp1bnRvIiB0eXBlPSJ4czpzdHJpbmciIG1zZGF0YTp0YXJnZXROYW1lc3BhY2U9IiIgbWluT2NjdXJzPSIwIiAvPg0KICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJhbHRlcmFjYW8iIHR5cGU9InhzOmludCIgbXNkYXRhOnRhcmdldE5hbWVzcGFjZT0iIiBtaW5PY2N1cnM9IjAiIC8+DQogICAgICA8L3hzOnNlcXVlbmNlPg0KICAgIDwveHM6Y29tcGxleFR5cGU+DQogIDwveHM6ZWxlbWVudD4NCiAgPHhzOmVsZW1lbnQgbmFtZT0iTmV3RGF0YVNldCIgbXNkYXRhOklzRGF0YVNldD0idHJ1ZSIgbXNkYXRhOk1haW5EYXRhVGFibGU9IlRhYmxlMyIgbXNkYXRhOlVzZUN1cnJlbnRMb2NhbGU9InRydWUiPg0KICAgIDx4czpjb21wbGV4VHlwZT4NCiAgICAgIDx4czpjaG9pY2UgbWluT2NjdXJzPSIwIiBtYXhPY2N1cnM9InVuYm91bmRlZCIgLz4NCiAgICA8L3hzOmNvbXBsZXhUeXBlPg0KICA8L3hzOmVsZW1lbnQ+DQo8L3hzOnNjaGVtYT4GBQAAAIcGPGRpZmZncjpkaWZmZ3JhbSB4bWxuczptc2RhdGE9InVybjpzY2hlbWFzLW1pY3Jvc29mdC1jb206eG1sLW1zZGF0YSIgeG1sbnM6ZGlmZmdyPSJ1cm46c2NoZW1hcy1taWNyb3NvZnQtY29tOnhtbC1kaWZmZ3JhbS12MSI+DQogIDxOZXdEYXRhU2V0Pg0KICAgIDxUYWJsZTMgZGlmZmdyOmlkPSJUYWJsZTMxIiBtc2RhdGE6cm93T3JkZXI9IjAiPg0KICAgICAgPHRwX2VuZGVyZWNvPjE8L3RwX2VuZGVyZWNvPg0KICAgICAgPG5tX2xvZ3JhZG91cm8+UlVBIFJJQUNIQU88L25tX2xvZ3JhZG91cm8+DQogICAgICA8ZHNfbnVtZXJvPjg3ODwvZHNfbnVtZXJvPg0KICAgICAgPGRzX2NvbXBsZW1lbnRvX2NvbXBsZXRvIC8+DQogICAgICA8bm1fYmFpcnJvPkNJUlVSR0lBPC9ubV9iYWlycm8+DQogICAgICA8Y2RfY2VwPjQ5MDU1NjAwPC9jZF9jZXA+DQogICAgICA8ZHRfZW5kZXJlY28+MjAyNC0wNC0xNlQyMzowNDoyMC43LTAzOjAwPC9kdF9lbmRlcmVjbz4NCiAgICAgIDxjZF91Zj5TRTwvY2RfdWY+DQogICAgICA8bm1fbG9jYWxpZGFkZT5BUkFDQUpVPC9ubV9sb2NhbGlkYWRlPg0KICAgICAgPGNkX2xvY2FsaWRhZGU+OTIxMjwvY2RfbG9jYWxpZGFkZT4NCiAgICAgIDxkc190aXBvX3Jlc2lkZW5jaWE+LTwvZHNfdGlwb19yZXNpZGVuY2lhPg0KICAgICAgPGNkX2VuZGVyZWNvPjc2ODcxMjE8L2NkX2VuZGVyZWNvPg0KICAgICAgPGFsdGVyYWNhbz4wPC9hbHRlcmFjYW8+DQogICAgPC9UYWJsZTM+DQogIDwvTmV3RGF0YVNldD4NCjwvZGlmZmdyOmRpZmZncmFtPgQDAAAADlN5c3RlbS5WZXJzaW9uBAAAAAZfTWFqb3IGX01pbm9yBl9CdWlsZAlfUmV2aXNpb24AAAAACAgICAIAAAAAAAAA//////////8LFgICAQ9kFgoCAQ9kFioCAQ8PFgIeBFRleHQFMkFCRE9OIFJPWkVORE8gRE9TIFNBTlRPUyAgICAgICAgICAgICAgICAgICAgICAgICAgZGQCAw8PFgIfDwUOMDMzLjc1NC45ODUtMDBkZAIFDw8WAh4HVmlzaWJsZWdkZAIHDw8WAh8PBQdSRUdVTEFSZGQCCQ8PFggeCUZvcmVDb2xvcgojHglGb250X0JvbGRoHw8FEE7Do28gRW5xdWFkcmFkby4eBF8hU0IChBBkZAILDw8WBh8PBS5CbG9xdWVhZG8gLSBJbmFkaW1wbGVuY2lhIC0gMTA1IERpYXMgZGUgQXRyYXNvHxEKjQEfEwIEZGQCDQ8PFgIfDwUxQXRpdm8gLSBSZWd1bGFyaXphw6fDo28gU2l0dWHDp8OjbyBBZG1pbmlzdHJhdGl2YWRkAg8PDxYCHw8FDkF0aXZvIC0gTm9ybWFsZGQCFQ8QZGQWAQIGZAIZDw8WAh8PBQtSJCAyLjAwOCwwNGRkAh0PDxYCHw8FB1IkIDAsMDBkZAIhDw8WAh8PBQtSJCA0LjM1MCwwMGRkAiUPDxYCHw8FCkFQT1NFTlRBRE9kZAIpDw8WAh8PBQ1BUE9TRU5UQURPKGEpZGQCKw8PFgIfEGhkZAItDzwrAAsBAA8WEh4LSGFzRGF0YVZpZXdnHhBEYXRhVmlld1Jvd1N0YXRlCylsU3lzdGVtLkRhdGEuRGF0YVZpZXdSb3dTdGF0ZSwgU3lzdGVtLkRhdGEsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5Fh4RRGF0YVZpZXdSb3dGaWx0ZXJlHghEYXRhS2V5cxYAHgtfIUl0ZW1Db3VudAIBHhVfIURhdGFTb3VyY2VJdGVtQ291bnQCAR4JUGFnZUNvdW50AgEeDERhdGFWaWV3U29ydGUeC0FsbG93UGFnaW5naGQWAmYPZBYEZg9kFgJmD2QWAmYPZBYCZg8PFhoeC0JvcmRlclN0eWxlCyolU3lzdGVtLldlYi5VSS5XZWJDb250cm9scy5Cb3JkZXJTdHlsZQAeC0JvcmRlcldpZHRoHB8RDB8TAv4DHg9Db21tYW5kQXJndW1lbnRlHgVXaWR0aBweCUJhY2tDb2xvcgweCENzc0NsYXNzZR4IVGFiSW5kZXgBAAAeC0NvbW1hbmROYW1lBQpQcm9zc2VndWlyHhBDYXVzZXNWYWxpZGF0aW9uaB4GSGVpZ2h0HB4LQm9yZGVyQ29sb3IMFgIeBWNsYXNzBRFwcm9zc2VndWlyUHJvZHV0b2QCAQ9kFgwCAQ8PFgIfDwUUQkFORVNFIENBUkQgRUxPIE1BSVNkZAICDw8WAh8PBQtCYW5lc2UgQ2FyZGRkAgMPDxYCHw8FETAwMTQuMDAxLjA0MzQyMC02ZGQCBA8PFgIfDwUBN2RkAgUPZBYCZg8PFgIfDwUyQUJET04gUk9aRU5ETyBET1MgU0FOVE9TICAgICAgICAgICAgICAgICAgICAgICAgICBkZAIGDw8WAh8PBQQyOTg5ZGQCLw8PFgIfEGhkZAIzD2QWFAIBDw8WAh8PBS9TZXJ2acOnbyBkZSBFbnZpbyBkZSBTTVMgLSBOw6NvIEFkZXJpZG8gQWRlcmlkb2RkAgMPDxYCHw8FAk9JZGQCBQ8QDxYCHxBoZGQWAGQCBw8PFgIeB0VuYWJsZWRoZGQCCQ8PFgQfDwUCNzkfKWhkZAILDw8WAh8paGRkAg0PDxYEHw8FCTk4ODUyMjQ1NB8paGRkAg8PDxYCHyloZGQCEQ8QDxYEHgdDaGVja2VkZx8paGRkZGQCEw8PFgIfKWhkZAI1DzwrAAsBAA8WEh8UZx8VCysEFh8WZR8XFgAfGAIBHxkCAR8aAgEfG2UfHGhkFgJmD2QWAgIBD2QWFAIBDw8WAh8PBQtSZXNpZGVuY2lhbGRkAgIPDxYCHw8FCUNvYnJhbsOnYWRkAgMPDxYCHw8FDig3OSkgOTg4NTIyNDU0ZGQCBA8PFgIfDwUDU2ltZGQCBw8PFgIfDwUHNzY4NzEyMWRkAggPDxYCHw8FC1Jlc2lkZW5jaWFsZGQCCQ8PFgIfDwUJQ29icmFuw6dhZGQCCg8PFgIfDwUCNzlkZAILDw8WAh8PBQk5ODg1MjI0NTRkZAIMDw8WAh8PBQkxNzAxODAwNTlkZAI3Dw8WAh8PBcgBRGVzYmxvcXVlYWRvIGF1dG9tYXRpY2FtZW50ZS4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkZAI5Dw8WAh8paGQWCAIDDxBkZBYBZmQCBw8QZGQWAWZkAgkPFCsAAmRkZAILDxQrAAJkZGQCAw88KwALAGQCBw8PFgIfDwUnTmVuaHVtIERhZG8gZG8gQmlyw7QgRXh0ZXJubyBFbmNvbnRyYWRvZGQCCQ9kFgoCAQ8PFgIfDwUrU2VydmnDp28gZGUgRmF0dXJhIHBvciBFbWFpbCAtIE7Do28gQWRlcmlkb2RkAgMPDxYCHyloZGQCBQ8PFgIfKWhkZAIHDxAPFgQfKmgfKWhkZGRkAgsPDxYCHxBoZBYCAgUPDxYCHyloZGQCCw9kFgYCAQ88KwALAQAPFggfFxYAHxgCAR8aAgEfGQIBZBYCZg9kFgQCAQ9kFihmDw8WAh8PBQtSVUEgUklBQ0hBT2RkAgEPDxYCHw8FAzg3OGRkAgIPDxYCHw8FAyAtIGRkAgMPDxYCHw8FCENJUlVSR0lBZGQCBA8PFgIfDwUHQVJBQ0FKVWRkAgUPDxYCHw8FCDQ5MDU1NjAwZGQCBg8PFgIfDwUCU0VkZAIHDw8WAh8PBQEtZGQCCA8PFgIfDwULUmVzaWRlbmNpYWxkZAIJDw8WAh8PBQMgLSBkZAIKDw8WAh8PBQoxNi8wNC8yMDI0ZGQCDQ8PFgIfDwUHNzY4NzEyMWRkAg4PDxYCHw8FBiZuYnNwO2RkAg8PDxYCHw8FBiZuYnNwO2RkAhAPDxYCHw8FBiZuYnNwO2RkAhEPDxYCHw8FBiZuYnNwO2RkAhIPDxYCHw8FBiZuYnNwO2RkAhMPDxYCHw8FBDkyMTJkZAIUDw8WAh8PBQYmbmJzcDtkZAIVDw8WAh8PBQEwZGQCAg9kFgQCAg8PFgIfDwUDIC0gZGQCCQ8PFgIfDwUDIC0gZGQCBw8PFgIfDwUpRW5kZXJlw6dvIGF0dWFsaXphZG8gaMOhIDEzNCBkaWFzIGF0csOhcy5kZAIJD2QWCAIBDxQrAAJkZGQCEQ8QZGQWAGQCFQ8QZGQWAGQCGQ9kFgYCAQ8QZGQWAWZkAgUPFCsAAmRkZAIHDxQrAAJkZGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFD2J0bkFsdGVyYXJFbWFpbAguiVEt5mmR87Nygpv0WRRC49m0rXZE7bBtobYyJzCP"/>
+   <script type="text/javascript">
+    <!--
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+// -->
+   </script>
+   <script src="/Cobranca/WebResource.axd?d=3NwbYs2qvQPQvRpwh_6gkIvSv2ML8u37EiLzGFnU1Dy-cTF0TVT0hhpSkeezmDWBJ7MZfh3GRuVeWx89HIP9XrnKWusNj6BMq61lnV7sV0k1&amp;t=637814545746327080" type="text/javascript">
+   </script>
+   <script src="/Cobranca/WebResource.axd?d=wGp3Mdf14Svl7CDwWdAGpNOSihk9vIcJCqfAiwwkDWiSHcbIkbM1fmNNy8_FhAlw5F0zKvxCE9386XxfaFuDvzOoQ80Jaw2xSBTBnW1CBnk1&amp;t=637814545746327080" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    <!--
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+// -->
+   </script>
+   <input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="B1755C75"/>
+   <input id="__SCROLLPOSITIONX" name="__SCROLLPOSITIONX" type="hidden" value="0"/>
+   <input id="__SCROLLPOSITIONY" name="__SCROLLPOSITIONY" type="hidden" value="0"/>
+   <input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="/wEdABhc6jvQl5P+UtrInREp09jHfivnwJCE9VzVk9qKomqNbviZQCHxkdhU9EvhE2sB0geJPL2FC+6MdjtM8B4FOXlGNewpn77DtCW1ARIsZGF2YoCnn/DvJ50iT3S+VTmI5uGUacLLGGeMCLElPk3UHYOOyEI6ZcrnbEmXSK5MCHrJ3NeZsUxnhZwNWJiaFW2peLG422ocr5zWNu5eVQsFsGeZEhdzy0+ObTy5z+KIUmdWQXonNVppp9MVD0LXa0vL3oObjwBgZ9XsCkz3GTHhtOnoAqCvgHABmd10vIx4qJvvGFeiTJ1hlHXIejAC5BoQW1bCikTVwnPnSLIv8U+EjLlSG1A2TShMJweWP9ouFhoZ//1fFcTjMQyldOKt6xTzHrBZ4Ix1sEnCPimiKlSh6F+7QwdmH1m48FGJ7a8D8d+hElGTQI3hLiW38yz/OFlYrbdjiLvacQvKAs92Jy2u+DdlglT+HIAMurjjAbZY+MSKH31zjOJCd18vRpVfkz7rNTApUMfpphbpYJvuqSxTqZ+GBmke5IeptwHiJKg+bjTPRg=="/>
+   <div id="panSelecaoProduto">
+    <h1>
+     Atualização Cadastral Cliente
+    </h1>
+    <table align="center" border="0" cellpadding="1" cellspacing="0" class="tabela" id="tblDadosCliente" width="100%">
+     <tr>
+      <td class="tabelaTitulo" width="100%">
+       <font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2">
+        <strong>
+         Dados do Cliente
+        </strong>
+       </font>
+      </td>
+     </tr>
+     <tr>
+      <td height="1">
+       <table align="center" border="0" cellspacing="2" id="tblDadosCliente2" width="100%">
+        <tr valign="middle">
+         <td align="right" width="15%">
+          <b>
+           Nome do Cliente:
+          </b>
+         </td>
+         <td align="left" width="30%">
+          <span id="lblNome">
+           ABDON ROZENDO DOS SANTOS
+          </span>
+         </td>
+         <td align="right" width="8%">
+          <b>
+           CPF:
+          </b>
+         </td>
+         <td align="left" width="15%">
+          <span id="lblCpf">
+           033.754.985-00
+          </span>
+         </td>
+         <td align="right" width="15%">
+          <b>
+           <span id="lblDsAvaliacao">
+            Avaliação:
+           </span>
+          </b>
+         </td>
+         <td align="left" width="15%">
+          <span id="lblAvaliacao">
+           REGULAR
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td align="right" width="15%">
+          <strong>
+           Oferta:
+          </strong>
+         </td>
+         <td align="left" width="30%">
+          <span id="lblOfertaEnquadrada" style="color:Black;font-weight:normal;z-index: 0">
+           Não Enquadrado.
+          </span>
+         </td>
+         <td align="right" width="8%">
+          <strong>
+           Status Automático:
+          </strong>
+         </td>
+         <td align="left" width="15%">
+          <span id="lblStatusAutomatico" style="color:Red;z-index: 0">
+           Bloqueado - Inadimplencia - 105 Dias de Atraso
+          </span>
+         </td>
+         <td align="right" width="15%">
+         </td>
+         <td align="left" width="15%">
+         </td>
+        </tr>
+        <tr>
+         <td align="right" width="15%">
+          <strong>
+           Status Administrativo:
+          </strong>
+         </td>
+         <td align="left" width="30%">
+          <span id="lblStatusAdministrativo" style="z-index: 0">
+           Ativo - Regularização Situação Administrativa
+          </span>
+         </td>
+         <td align="right" width="8%">
+          <strong>
+           Status Contábil:
+          </strong>
+         </td>
+         <td align="left" width="15%">
+          <span id="lblStatusContabil" style="z-index: 0">
+           Ativo - Normal
+          </span>
+         </td>
+         <td align="right" width="15%">
+         </td>
+         <td align="left" width="15%">
+         </td>
+        </tr>
+        <tr>
+         <td align="right" width="15%">
+          <strong>
+           Mensagem:
+          </strong>
+         </td>
+         <td align="left" width="30%">
+         </td>
+         <td align="right" width="8%">
+         </td>
+         <td align="left" width="15%">
+         </td>
+         <td align="right" width="15%">
+         </td>
+         <td align="left" width="15%">
+         </td>
+        </tr>
+       </table>
+      </td>
+     </tr>
+    </table>
+    <br/>
+    <table border="0" cellpadding="0" cellspacing="0" class="tabela" id="tblDadosProfissionais" width="100%">
+     <tr>
+      <td class="tabelaTitulo">
+       <span class="tabelaTitulo" id="Label24" style="font-weight:bold;">
+        Dados Profissionais
+       </span>
+      </td>
+      <tr>
+       <td>
+        <table border="0" cellpadding="0" cellspacing="4" id="tblCamposDadosProfissionais" width="100%">
+         <tr>
+          <td align="right" height="30" width="15%">
+           <span id="Label113" style="font-weight:bold;">
+            Tipo Ocupação:
+           </span>
+          </td>
+          <td height="30">
+           <span disabled="disabled" id="rb_tpOcupacao" style="display:inline-block;width:980px;">
+            <span disabled="disabled">
+             <input disabled="disabled" id="rb_tpOcupacao_0" name="rb_tpOcupacao" type="radio" value="1"/>
+             <label for="rb_tpOcupacao_0">
+              Func. Público Municipal
+             </label>
+            </span>
+            <span disabled="disabled">
+             <input disabled="disabled" id="rb_tpOcupacao_1" name="rb_tpOcupacao" type="radio" value="2"/>
+             <label for="rb_tpOcupacao_1">
+              Func. Público Estadual
+             </label>
+            </span>
+            <span disabled="disabled">
+             <input disabled="disabled" id="rb_tpOcupacao_2" name="rb_tpOcupacao" type="radio" value="3"/>
+             <label for="rb_tpOcupacao_2">
+              Func. Público Federal
+             </label>
+            </span>
+            <span disabled="disabled">
+             <input disabled="disabled" id="rb_tpOcupacao_3" name="rb_tpOcupacao" type="radio" value="4"/>
+             <label for="rb_tpOcupacao_3">
+              Empregado Registrado
+             </label>
+            </span>
+            <span disabled="disabled">
+             <input disabled="disabled" id="rb_tpOcupacao_4" name="rb_tpOcupacao" type="radio" value="5"/>
+             <label for="rb_tpOcupacao_4">
+              Profissional Liberal
+             </label>
+            </span>
+            <span disabled="disabled">
+             <input disabled="disabled" id="rb_tpOcupacao_5" name="rb_tpOcupacao" type="radio" value="6"/>
+             <label for="rb_tpOcupacao_5">
+              Autônomo
+             </label>
+            </span>
+            <span disabled="disabled">
+             <input checked="checked" disabled="disabled" id="rb_tpOcupacao_6" name="rb_tpOcupacao" type="radio" value="7"/>
+             <label for="rb_tpOcupacao_6">
+              Aposentado
+             </label>
+            </span>
+            <span disabled="disabled">
+             <input disabled="disabled" id="rb_tpOcupacao_7" name="rb_tpOcupacao" type="radio" value="8"/>
+             <label for="rb_tpOcupacao_7">
+              Outros
+             </label>
+            </span>
+           </span>
+          </td>
+         </tr>
+         <tr>
+          <td align="right" height="30" width="15%">
+           <span id="lblRenda" style="font-weight:bold;">
+            Renda Mensal/Salário:
+           </span>
+          </td>
+          <td height="30">
+           <span disabled="disabled" id="mskSalario" style="width:100px;">
+            R$ 2.008,04
+           </span>
+           <span id="lblOutrasRendas" style="font-weight:bold;">
+            Outras Rendas:
+           </span>
+           <span disabled="disabled" id="mskOutrasRendas" style="width:100px;">
+            R$ 0,00
+           </span>
+           <span id="lblRendaPresumida" style="font-weight:bold;">
+            Renda Presumida:
+           </span>
+           <span disabled="disabled" id="mskRendaPresumida" style="width:105px;">
+            R$ 4.350,00
+           </span>
+          </td>
+         </tr>
+         <tr>
+          <td align="right" height="30" width="15%">
+           <span id="Label118" style="font-weight:bold;">
+            Cargo/Função:
+           </span>
+          </td>
+          <td height="30">
+           <span class="txtUp" disabled="disabled" id="txtProfissao" maxlength="40" style="width:250px;">
+            APOSENTADO
+           </span>
+           <span id="Label117" style="font-weight:bold;z-index: 0">
+            Ocupação:
+           </span>
+           <span disabled="disabled" id="txtAtividade" style="width:260px;z-index: 0">
+            APOSENTADO(a)
+           </span>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+     </tr>
+     <tr>
+      <td>
+       <center>
+       </center>
+      </td>
+     </tr>
+    </table>
+    <br/>
+    <table align="center" border="0" cellpadding="2" cellspacing="0" class="tabela" id="TableprodutosCliente" style="margin: 0px" width="100%">
+     <tr>
+      <td class="tabelaTitulo" style="height: 24px" width="100%">
+       <strong>
+        Produtos do Cliente
+       </strong>
+      </td>
+     </tr>
+     <tr>
+      <td style="height: 102px">
+       <table border="1" cellpadding="2" cellspacing="0" class="tabela" id="grdProdutosCliente" rules="rows" style="width:100%;border-collapse:collapse;">
+        <tr align="center" class="gridTitulo" style="font-weight:bold;">
+         <td style="width:10%;">
+          <input class="prosseguirProduto" id="grdProdutosCliente__ctl1_btnProsseguirProduto_btn" name="grdProdutosCliente:_ctl1:btnProsseguirProduto_btn" type="submit" value="Prosseguir"/>
+         </td>
+         <td style="width:40%;">
+          Nome do Produto
+         </td>
+         <td>
+          Tipo
+         </td>
+         <td>
+          Número da Conta
+         </td>
+        </tr>
+        <tr align="center" class="gridItem">
+         <td>
+          <span disabled="disabled">
+           <input checked="checked" disabled="disabled" id="grdProdutosCliente__ctl2_ckbSelecao" name="grdProdutosCliente:_ctl2:ckbSelecao" type="checkbox"/>
+          </span>
+         </td>
+         <td>
+          BANESE CARD ELO MAIS
+         </td>
+         <td>
+          Banese Card
+         </td>
+         <td>
+          0014.001.043420-6
+         </td>
+        </tr>
+       </table>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <center>
+        <br/>
+       </center>
+      </td>
+     </tr>
+    </table>
+    <br/>
+    <div id="pnlTelefone" style="z-index: 0">
+     <table border="0" cellpadding="2" cellspacing="0" class="tabela" id="Table5" width="100%">
+      <tr>
+       <td align="center" class="tabelaTitulo" width="94%">
+        <p align="left">
+         <font color="#ffffff">
+          <b>
+           <font size="2">
+            <span id="lblServicoSms" style="color:White;z-index: 0">
+             Serviço de Envio de SMS - Não Aderido Aderido
+            </span>
+           </font>
+          </b>
+         </font>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td align="center" width="67%">
+        <table border="0" cellspacing="5" id="t1" width="100%">
+         <tr>
+          <td align="right">
+           <b>
+            Operadora:
+           </b>
+          </td>
+          <td>
+           <span id="lblOperadora" style="z-index: 0">
+            OI
+           </span>
+           <span class="validacao" enabled="False" evaluationfunction="CustomValidatorEvaluateIsValid" id="cvOperadora" style="color:Red;z-index:0;visibility:hidden;">
+            1
+           </span>
+          </td>
+          <td align="right">
+           <b>
+            DDD:
+           </b>
+          </td>
+          <td>
+           <input disabled="disabled" id="txtDDD" maxlength="2" name="txtDDD" onkeypress="return(mascara2(this, event, 2))" size="5" type="text" value="79"/>
+           <span class="validacao" enabled="False" evaluationfunction="CustomValidatorEvaluateIsValid" id="cvDDD" style="color:Red;z-index:0;visibility:hidden;">
+            2
+           </span>
+          </td>
+          <td align="right">
+           <strong>
+            Telefone:
+           </strong>
+          </td>
+          <td>
+           <input disabled="disabled" id="txtTelefone" maxlength="9" name="txtTelefone" onkeypress="return(mascara2(this, event, 9))" size="12" style="z-index: 0" type="text" value="988522454"/>
+           <span class="validacao" enabled="False" evaluationfunction="CustomValidatorEvaluateIsValid" id="cvTelefone" style="color:Red;z-index:0;visibility:hidden;">
+            3
+           </span>
+          </td>
+          <td>
+           <span disabled="disabled" style="font-weight:bold;z-index: 0">
+            <input checked="checked" disabled="disabled" id="ckbSmsAderido" name="ckbSmsAderido" type="checkbox"/>
+            <label for="ckbSmsAderido">
+             Serviço de Envio de SMS
+            </label>
+           </span>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+     </table>
+    </div>
+    <br>
+     <br/>
+     <table border="0" cellpadding="4" cellspacing="0" class="tabela" id="Table1" style="width: 100%">
+      <tr>
+       <td class="tabelaTitulo">
+        Telefones Cobranca
+       </td>
+      </tr>
+      <a id="ancora" name="ancora">
+       <tr>
+        <td align="center">
+         <table border="1" cellpadding="2" cellspacing="0" class="tabela" id="grdTelefoneCobranca" rules="rows" style="width:100%;border-collapse:collapse;">
+          <tr align="center" class="gridTitulo" style="font-weight:bold;">
+           <td style="width:100px;">
+            <input id="grdTelefoneCobranca__ctl1_btnIncluir" name="grdTelefoneCobranca:_ctl1:btnIncluir" style="z-index: 0" type="submit" value="Incluir"/>
+           </td>
+           <td>
+            Tipo Endereço
+           </td>
+           <td>
+            Tipo Telefone
+           </td>
+           <td>
+            Telefone
+           </td>
+           <td>
+            Telefone WhatsApp
+           </td>
+           <td style="width:50px;">
+           </td>
+           <td style="width:50px;">
+           </td>
+          </tr>
+          <tr align="center" class="gridItem">
+           <td>
+           </td>
+           <td>
+            Residencial
+           </td>
+           <td>
+            Cobrança
+           </td>
+           <td>
+            (79) 988522454
+           </td>
+           <td>
+            Sim
+           </td>
+           <td>
+            <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("grdTelefoneCobranca:_ctl2:lbEditar", "", true, "", "", false, true))' id="grdTelefoneCobranca__ctl2_lbEditar">
+             <img alt="Editar" border="0" src="../images/editar.gif"/>
+            </a>
+           </td>
+           <td>
+            <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("grdTelefoneCobranca:_ctl2:lbExcluir", "", true, "", "", false, true))' id="grdTelefoneCobranca__ctl2_lbExcluir">
+             <img alt="Excluir" border="0" src="../images/x.gif"/>
+            </a>
+           </td>
+          </tr>
+         </table>
+        </td>
+       </tr>
+       <tr>
+        <td align="center" colspan="6">
+        </td>
+       </tr>
+       <tr>
+        <td>
+        </td>
+       </tr>
+      </a>
+     </table>
+    </br>
+   </div>
+   <br/>
+   <table align="center" border="0" cellpadding="2" cellspacing="0" class="tabela" id="TabelaBiroExterno" style="margin: 0px" width="100%">
+    <tr>
+     <td class="tabelaTitulo" style="height: 24px" width="100%">
+      <strong>
+       Birô Externo
+      </strong>
+     </td>
+    </tr>
+    <tr>
+     <td style="height: 102px">
+      <p>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td align="center" class="tabelaBotoes" colspan="4">
+      <a name="ancoraBiro">
+      </a>
+      <input autopostback="True" id="btnConsultaBiro" language="javascript" name="btnConsultaBiro" onclick='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("btnConsultaBiro", "", true, "", "", false, false))' style="z-index: 0" type="submit" value="Nova Consulta"/>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <center>
+       <span id="lblErroBiro" style="color:Red;font-weight:bold;">
+        Nenhum Dado do Birô Externo Encontrado
+       </span>
+      </center>
+     </td>
+    </tr>
+   </table>
+   <div id="pnlEmail" style="z-index: 0">
+    <br/>
+    <table border="0" cellpadding="2" cellspacing="0" class="tabela" id="Table6" width="100%">
+     <tr>
+      <td align="center" class="tabelaTitulo" width="94%">
+       <p align="left">
+        <font color="#ffffff">
+         <b>
+          <font size="2">
+           <span id="lblFaturaEmail" style="color:White;z-index: 0">
+            Serviço de Fatura por Email - Não Aderido
+           </span>
+          </font>
+         </b>
+        </font>
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td align="center" width="67%">
+       <table border="0" cellspacing="5" id="Table9" width="100%">
+        <tr>
+         <td align="right">
+          <strong>
+           Email Pessoal:
+          </strong>
+         </td>
+         <td align="left">
+          <input disabled="disabled" id="txtEmail" name="txtEmail" size="60" style="z-index: 0" type="text"/>
+          <span class="validacao" enabled="False" evaluationfunction="CustomValidatorEvaluateIsValid" id="cvEmail" style="color:Red;z-index:0;visibility:hidden;">
+           1
+          </span>
+         </td>
+         <td align="left">
+          <span disabled="disabled" style="font-weight:bold;z-index: 0">
+           <input disabled="disabled" id="ckbAdesaoEmail" name="ckbAdesaoEmail" type="checkbox"/>
+           <label for="ckbAdesaoEmail">
+            Serviço de Fatura por Email
+           </label>
+          </span>
+         </td>
+         <td align="right">
+          <input border="0" id="btnAlterarEmail" language="javascript" name="btnAlterarEmail" onclick='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("btnAlterarEmail", "", true, "", "", false, false))' src="../images/Editar.gif" style="z-index: 0" type="image"/>
+         </td>
+        </tr>
+       </table>
+       <br/>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div id="pnlEndereco" style="z-index: 0">
+    <br/>
+    <table border="0" cellpadding="2" cellspacing="0" class="tabela" id="Table6" width="100%">
+     <tr>
+      <td align="center" class="tabelaTitulo" width="94%">
+       <p align="left">
+        <font color="#ffffff">
+         <b>
+          <font size="2">
+           Endereço
+          </font>
+         </b>
+        </font>
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td align="center" width="67%">
+       <table align="Center" border="1" cellspacing="0" class="grid" id="grdEndereco" rules="all" style="width:100%;border-collapse:collapse;z-index: 0">
+        <tr align="center" class="gridTitulo" style="font-weight:bold;height:10px;" valign="top">
+         <td>
+          Logradouro
+         </td>
+         <td>
+          Número
+         </td>
+         <td>
+          Complemento
+         </td>
+         <td>
+          Bairro
+         </td>
+         <td>
+          Localidade
+         </td>
+         <td>
+          CEP
+         </td>
+         <td>
+          UF
+         </td>
+         <td>
+          Tipo Residência
+         </td>
+         <td>
+          Tipo Endereço
+         </td>
+         <td>
+          Tempo Residência
+         </td>
+         <td>
+          Última Alteração
+         </td>
+        </tr>
+        <tr align="center" class="gridItem">
+         <td>
+          RUA RIACHAO
+         </td>
+         <td>
+          878
+         </td>
+         <td>
+          -
+         </td>
+         <td>
+          CIRURGIA
+         </td>
+         <td>
+          ARACAJU
+         </td>
+         <td>
+          49055600
+         </td>
+         <td>
+          SE
+         </td>
+         <td>
+          -
+         </td>
+         <td>
+          Residencial
+         </td>
+         <td>
+          -
+         </td>
+         <td>
+          16/04/2024
+         </td>
+        </tr>
+       </table>
+       <table align="center" border="0" cellpadding="2" cellspacing="0" class="tabelaBotoes" id="tblAcoes" width="100%">
+        <tbody>
+         <tr>
+          <td align="center">
+           <input id="btValidarCadastro" language="javascript" name="btValidarCadastro" onclick='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("btValidarCadastro", "", true, "", "", false, false))' type="submit" value="Validar Cadastro"/>
+           <input id="btAlterarCadastro" language="javascript" name="btAlterarCadastro" onclick='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("btAlterarCadastro", "", true, "", "", false, false))' type="submit" value="Alterar Cadastro"/>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </td>
+     </tr>
+    </table>
+    <span id="lblInformacaoEndereco" style="color:Red;font-weight:bold;z-index: 0">
+     Endereço atualizado há 134 dias atrás.
+    </span>
+    <br/>
+    <br/>
+   </div>
+   <script type="text/javascript">
+    <!--
+var Page_Validators =  new Array(document.getElementById("cvOperadora"), document.getElementById("cvDDD"), document.getElementById("cvTelefone"), document.getElementById("cvEmail"));
+// -->
+   </script>
+   <script type="text/javascript">
+    <!--
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+// -->
+   </script>
+  </form>
+ </body>
+</html>

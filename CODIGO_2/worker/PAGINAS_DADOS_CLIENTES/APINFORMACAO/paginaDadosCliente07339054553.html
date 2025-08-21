@@ -1,0 +1,770 @@
+<html lang="pt-br"><head>
+        <!-- Required meta tags-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Consulta ">
+        <meta name="author" content="Hau Nguyen">
+        <meta name="keywords" content="au theme template">
+
+        <!-- Title Page-->
+        <title>Consulta</title>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+            
+        <!-- Fontfaces CSS-->
+        <link href="../../new_assets/css/font-face.css" rel="stylesheet" media="all">
+        <link href="../../new_assets/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+        <link href="../../new_assets/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+        <link href="../../new_assets/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+        <!-- Bootstrap CSS Bootstrap 4 funciona, mas atualizando para a versão 5, verificar outros componoentes e atualiza-los para versões mais recentes também.-->
+        <link href="../../bootstrap-5.0.2/css/bootstrap.min.css" rel="stylesheet" media="all">
+                <!-- Vendor CSS-->
+        <link href="../../new_assets/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+        <link href="../../new_assets/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+        <link href="../../new_assets/vendor/wow/animate.css" rel="stylesheet" media="all">
+        <link href="../../new_assets/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+        <link href="../../new_assets/vendor/slick/slick.css" rel="stylesheet" media="all">
+        <link href="../../new_assets/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+        <link href="../../new_assets/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+        <!-- Main CSS-->
+        <link href="../../new_assets/css/theme.css" rel="stylesheet" media="all">
+            
+        <!-- CSS TEMPORÁRIO PARA O RETORNO DA CONSULTA? -->
+        <link rel="stylesheet" href="../icss/APi_retorno.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="../icss/icones.css">
+
+        <link rel="stylesheet" href="css/style.css">		
+                    <script async="" src="https://scripts.clarity.ms/0.8.24/clarity.js"></script><script async="" src=" https://www.clarity.ms/tag/rj52fx2ort"></script><script type="text/javascript">
+                (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src=" https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, "clarity", "script", "rj52fx2ort");
+            </script>
+            
+    <style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head>
+		<body>
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop3 d-lg-block" style="max-height: 60px">
+            <div class="section__content section__content--p35">
+                <div class="header3-wrap">
+                    <div class="header__logo mt-3" style="font-size:18px">
+						3546A14&nbsp;&nbsp;&nbsp;14/08/2025 17:00:26						
+                    </div>
+                    <div class="header__navbar d-print-none">
+                        <ul class="list-unstyled">
+ 
+                            <li class="ml-auto">
+                                <a href="../endtel/index2.php" class="text-dark">
+                                    <i class="fas fa-search-plus"></i>
+                                    <span class="bot-line"></span>Nova consulta</a>
+                            </li>
+                            <li class="d-none">
+                                <a href="#" onclick="printBy(&quot;#rels&quot;)" class="text-dark">
+                                    <i class="fas fa-print"></i>
+                                    <span class="bot-line"></span>Imprimir</a>
+                            </li>
+ 
+                            
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </header>
+        <!-- END HEADER DESKTOP-->
+
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile header-mobile-2 d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <!-- usuario -->
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile d-print-none">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li>
+                            <a href="../endtel/index2.php">
+                                <i class="fas fa-chart-bar"></i>Nova consulta</a>
+                        </li>
+                        <li class="d-none">
+                            <a href="#" onclick="printBy(&quot;#rels&quot;)">
+                                <i class="fas fa-table"></i>Imprimir</a>
+                        </li>                        
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE -->
+	
+		<!-- PAGE CONTENT-->	
+        <div class="page-content--bgf7">
+            <!-- BREADCRUMB-->
+            <section class="au-breadcrumb2 d-print-none">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="au-breadcrumb-content ">
+                                <div class="au-breadcrumb-left">
+                                    <span class="au-breadcrumb-span">Você está em </span>
+                                    <ul class="list-unstyled list-inline au-breadcrumb__list">
+                                        <li class="list-inline-item">
+                                            <a href="../centro/home.php">Consultas</a>
+                                        </li>
+                                        <li class="list-inline-item seprate">
+                                            <span>/</span>
+                                        </li>
+                                        <li class="list-inline-item">
+											<a href="../endtel/index2.php">Farmácia JM</a>										</li>
+                                        <li class="list-inline-item seprate">
+                                            <span>/</span>
+                                        </li>
+                                        <li class="list-inline-item active">D-07339054553</li>										
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END BREADCRUMB-->
+			</div><!-- PAGE CONTENT-->	
+
+	
+    <script src="../../new_assets/vendor/jquery-3.2.1.min.js"></script>
+	<script src="../../new_assets/vendor/jquery-ui.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="../../new_assets/vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="../../new_assets/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="../../new_assets/vendor/slick/slick.min.js">
+    </script>
+    <script src="../../new_assets/vendor/wow/wow.min.js"></script>
+    <script src="../../new_assets/vendor/animsition/animsition.min.js"></script>
+    <script src="../../new_assets/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="../../new_assets/vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="../../new_assets/vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="../../new_assets/vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="../../new_assets/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="../../new_assets/vendor/chartjs/Chart.bundle.min.js"></script>
+	<script src="../../new_assets/vendor/chartjs/Gauge.js"></script>
+    <script src="../../new_assets/vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <!--<script src="../../new_assets/js/main.js"></script>-->
+
+
+<div class="container-fluid p-0">
+<div class="wrapper d-flex align-items-stretch">
+
+	<!-- Page Content  -->
+	<div id="content" class="p-4 p-md-1 pt-5">
+		<div class="card">
+			<div class="card-body p-2">
+					<h5 class="card-title text-center">Farmácia JM</h5>
+	  <p class="card-text">
+			</p><div class="row text-capitalize p-0 m-0 mt-2 Ret_table " id="consulta_1" data-autoload="1" data-ret="return_1" data-ajax="VQC2%2BIkWh4%2B8cFK4Uu6jsdnpQ94UYdqV7OVLhwZKfDibcL3iPeZo%2B84ZepSm183o5aSmrcLHgCqoEsV5saVJB7G890s5q21AgYs7rgzlawBuAjLsACPx5cV0cvsa0yyN8%2BY88coW%2B%2FxtlZIpD8WKf1EH5v2zxYFhtdGH27IIS4zz9bFDeCsC4itxvkWHIK8h3N6U%2B%2BbrzARK80DELXDgV5ghIZ%2FlzzFsfQpIW9AosAY50WiqejG7hvUc8fwhy%2FhXXm6DE49LxMiAPHt0tyrP%2BCG4EEUbVWqCpy25fVs8BLobg84WrdlKxCBsd9W50vfXqOU14NwC%2B3sH2KzYko5XIsTF%2FlCxPoWP8UB4gEGZd4L30sZtkt4yND%2BFTkfnCwXrHLBHeLhyQ35fypUEs5RsZJNa1AS3D4oABRLkpmChq07AK3Yq1FEqcnZJIJ6z24WAsEc4BGR71h6%2Bc9yYX1htelIKqzaJQaFxhxRtidmTGG3qu7RQdUTnJyq1AZf0P9xi7%2B6vzGdktbnAjt%2FqcBYyiEKx7spkk8TfdDXLbrYkqLCSS%2F5h6OzBRj0o%2By5Kpqv2dzx1Wzp8%2F9NQ5P4d5yY8CxkUBcVyB9Z7yo0jXLQM26w3fqMX5byrfU6Vc77eqPZfzdUrISxxRrcNUF7UqvlsH2n%2FfqxAsEnwmdnumz2bJ%2Fhku%2BqENDxA%2FeEMABFUrb7AMwqMCSi%2F%2F2ZlsE%2FQzOTj2epoiwxNOwEwCUecRszaiiC9VMLsG1L4opgEav9F7hCtiBcXf%2FagxzuyNvzpqKPVEWvgEMriS%2F1pDITK2Xzi88C3kguVyeZQl4OgRa6iNHaOqlTNCTJwIGbqoScVgXde9yDtYMj7rdCyvFbw79hrcsA171QttAreQql%2FGHbfegdnNJj5pb2F%2FoEjIfUNRWyfKN5zmjqFL1bM1dA2KrFq%2Bh2KpENcTaqux2H60aygnzLryXuH67Q9djsU5yZMYNy21V6McRbtCYPzJsF6YojbZStuL0yI9tzTsaka%2Bjce%2BSCdcRpFyxaU2w2gYj8Ep8YPnpw90P%2BUPZVv" url-ajax="../endtelmodfiles/mds" value="1">
+			<div class="col-12">
+				<div class="row border-bottom no_padd_marg">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-8 mt-2 mb-2 ">
+							<span class="h4 text-primary ml-1"><i class="fas fa-address-book" id="icon_" 1=""></i>&nbsp;&nbsp;<span id="title_1">Síntese Cadastral</span>&nbsp;&nbsp;<span id="badge_1" class="">&nbsp;</span></span>
+							</div>
+							<div class="col-4 mt-2t ext-right">
+															</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">				<div>
+				</div>
+				<div id="return_1">		<div class="row text-capitalize mt-1" id="" value="0">
+			<div class="col-12 ">
+				<div class="row mt-2 border-bottom">
+					<div class="col-6 col-sm-2 mt-3 text"><strong>Documento</strong></div>
+					<div class="col-6 col-sm-6 mt-3">073.390.545-53&nbsp;-&nbsp;Bahia / Sergipe</div>
+					<div class="col-6 col-sm-2 mt-3 text-right"><strong>R.G</strong></div>
+					<div class="col-6 col-sm-2 mt-3 px-0"></div>
+				</div>
+
+				<div class="row border-bottom bg-light">
+					<div class="col-6 col-sm-2 mt-4"><strong>Nome</strong></div>
+					<div class="col-6 col-sm-6 mt-4">abdias souza filho</div>
+					<div class="col-6 col-sm-2 mt-3 text-right"><strong>Título</strong></div>
+					<div class="col-6 col-sm-2 mt-3 px-0"></div>
+
+				</div>
+
+				<div class="row mt-2 border-bottom">
+					<div class="col-6 col-sm-2 mt-3 text"><strong>Nascimento</strong></div>
+					<div class="col-6 col-sm-6 mt-3">08/12/1954&nbsp;-&nbsp;70 Anos&nbsp;&nbsp;&nbsp;(&nbsp;Sagitário&nbsp;)</div>
+					<div class="col-6 col-sm-2 mt-3 text-sm-right text-left"><strong>Sexo</strong></div>
+					<div class="col-6 col-sm-2 mt-3 px-0 ">masculino</div>
+				</div>
+
+				<div class="row border-bottom bg-light">
+					<div class="col-6 col-sm-2 mt-4"><strong>Mãe</strong></div>
+					<div class="col-6 col-sm-10 mt-4">
+						anezia bispo de souza alves					</div>
+				</div>
+							</div>
+		</div>
+		<br><br>
+
+		
+
+<script>
+		
+	//$('#badge_1').addClass("badge badge-primary").html('5');
+	//$('#badge_1').html('5');
+	//$('#icon_1').removeClass("da fa-envelope").addClass("fas fa-phone");//não está funcionando remover ou alterar a classe de icones.
+	
+</script>
+</div>
+			</div>
+		</div>
+		<script>
+(function($) {
+		$("#consulta_1").on("click","#refresh", function(){
+				var blocoID	= $(this).attr("data-id");
+			var blocoObj=$("#"+blocoID);
+			//console.log("Problemas no number call: " + blocoObj.attr('value'));
+
+			$("#"+blocoObj.attr('data-ret')).html('<div class="alert alert-danger text-center mt-5 mb-5" role="alert">Não foi possivel concluir o retorno do  modulo. Tente novamente dentro de algumas horas.</div>');
+			consulta("#"+blocoObj.attr('id'), blocoObj.attr('data-ret'), blocoObj.attr('data-ajax'), blocoObj.attr('value'), blocoObj.attr('url-ajax'), "ClickClackBoom")
+			//consulta("#"+blocoObj.attr('id'), blocoObj.attr('data-ret'), blocoObj.attr('data-ajax'), blocoObj.attr('value'), blocoObj.attr('url-ajax'), "ClickClackBoom")
+
+		});
+	})(jQuery);
+		</script>
+			<div class="row text-capitalize p-0 m-0 mt-2 Ret_table " id="consulta_4" data-autoload="1" data-ret="return_4" data-ajax="VQC2%2BIkWh4%2B8cFK4Uu6jsdnpQ94UYdqVVDXhXt7DJ3i9F1e%2FxHhoBcDGEb%2Fu3AscNcDqb0C93Yk1CMyyn2aWzmWvupJkug%2B3M%2FVsvMSU3L9m67Qgdv%2FU52GtoyB8aX1c5uAMUW9shHN%2FGuAofq5ZK%2BE62JV3zDCEHoCwsz590iGfTNHfKUlWxDTCSn4n8FgeYH%2FyJn78f8ADqDFc5Xd0mZY%2Fxy40PBHfB3Jc3%2BLRmHwDfqbXDvvoneKY9B8gHz7Au1yp9WIjKvIshMoOWNJV06AU11hNr1xGv3KMDWKkn%2B8k8JIE8%2FhIg5WlrtmoXH2IDPYYpbqlqQXTQL2E87M%2FDaS16Yqf%2BktU%2FwYSKmcwhvUhpHABB8K0iSEBB%2ByRo2%2BzZUHkf0xNKWnI1O0dbCCfyEQ59mRJNWvuFgHk1tgxFlcd6iEmjmfuqcqMoFEmaaEC5N7C13tFGuf2GwZ6FvC%2BaVa4XJxJVJgZzsoqtin97vIryH3KxGTQl9GMGT%2B%2Bgh0OAQc9MP0HqwLHilPNSZqWtg0ujcaLOnwskUr0uh8RhAzj48%2BxaVMFRm5EKuyyhk%2FpfqoEe7ONzb%2FLXx8mXWKZtFX%2FUf%2FnC08CPqTqbj%2BAfZtULjsU0GLS0YIt4B%2BuUmH1hcv%2BP4iUFuu644GX%2FwdU%2BNg%2B8u1mWyi3mNOkLGfZ0myfRZzHrmpF2RfIujG63%2FDcB27Av8SA3htZBGpvdOl416w5t79r%2B8s7JdCk4N0QDAuCeKWVbOB26TQv6Q7piqG2obCbAWTtWCVQuNv1TbPPYuj2VBfpLKwSZenCbqsDoxm5Km9bqVMWPoLQNd9L7mq4w5KDuDhsLtmFqPRlOTQmYyHRisqaymH%2BIAzcHPnV5vGKXta0mu97FDLo3R88YbTd3ixZHk0aPnbM6BiuKeClXqdlGpsTKOr6nxzdMsA9LeBSj7QFNZv2NLeO8JQKV3OIMaXxZAX6Gz3XLULCuEa2bQ2SXikP6lbHIM67lk0BoGMQexb4qheb44y%2F5pDK1POOz3qaqUA5Bd0%3D" url-ajax="../endtelmodfiles/mds" value="1">
+			<div class="col-12">
+				<div class="row border-bottom no_padd_marg">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-8 mt-2 mb-2 ">
+							<span class="h4 text-primary ml-1"><i class="fas fa-envelope" id="icon_" 4=""></i>&nbsp;&nbsp;<span id="title_4">Email</span>&nbsp;&nbsp;<span id="badge_4" class="badge badge-primary">4</span></span>
+							</div>
+							<div class="col-4 mt-2t ext-right">
+															</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">				<div>
+				</div>
+				<div id="return_4">			<div class="row mt-3" style="text-transform:capitalize">
+				<div class="col-12">
+											<div class="row border-bottom ">
+							<div class="col-12 mt-3 my-1">
+								&nbsp;saulosilveirasouza@hotmail.com							</div>
+						</div>
+											<div class="row border-bottom bg-light">
+							<div class="col-12 mt-3 my-1">
+								&nbsp;lena9589@hotmail.com							</div>
+						</div>
+											<div class="row border-bottom ">
+							<div class="col-12 mt-3 my-1">
+								&nbsp;elenice.pereira@br.nestle.com							</div>
+						</div>
+											<div class="row border-bottom bg-light">
+							<div class="col-12 mt-3 my-1">
+								&nbsp;romurso@yahoo.com.br							</div>
+						</div>
+										<div class="mt-3">&nbsp;</div>
+				</div>
+			</div><br>
+			
+
+<script>
+			$('#badge_4').addClass("badge badge-primary").html(4);
+		
+	//$('#badge_4').addClass("badge badge-primary").html('5');
+	//$('#badge_4').html('5');
+	//$('#icon_4').removeClass("da fa-envelope").addClass("fas fa-phone");//não está funcionando remover ou alterar a classe de icones.
+	
+</script>
+</div>
+			</div>
+		</div>
+		<script>
+(function($) {
+		$("#consulta_4").on("click","#refresh", function(){
+				var blocoID	= $(this).attr("data-id");
+			var blocoObj=$("#"+blocoID);
+			//console.log("Problemas no number call: " + blocoObj.attr('value'));
+
+			$("#"+blocoObj.attr('data-ret')).html('<div class="alert alert-danger text-center mt-5 mb-5" role="alert">Não foi possivel concluir o retorno do  modulo. Tente novamente dentro de algumas horas.</div>');
+			consulta("#"+blocoObj.attr('id'), blocoObj.attr('data-ret'), blocoObj.attr('data-ajax'), blocoObj.attr('value'), blocoObj.attr('url-ajax'), "ClickClackBoom")
+			//consulta("#"+blocoObj.attr('id'), blocoObj.attr('data-ret'), blocoObj.attr('data-ajax'), blocoObj.attr('value'), blocoObj.attr('url-ajax'), "ClickClackBoom")
+
+		});
+	})(jQuery);
+		</script>
+			<div class="row text-capitalize p-0 m-0 mt-2 Ret_table " id="consulta_5" data-autoload="1" data-ret="return_5" data-ajax="VQC2%2BIkWh4%2B8cFK4Uu6jsdnpQ94UYdqVNdfdX7icfUHsTvV2Xd7PKgNBsJQw1gvbp%2Bj%2B%2BLFiI33%2FOEZ7lsCB7dJ8E4LEgC5SIu%2F9hYFB9yJ6sPt%2BMrXPCIPr54XnnATBwFDVCJNjzJYhF%2BMk8f%2B4i4bt9eHGV0H0NIwvEkPy1PzCPfFIp99eFFNOOC4t9%2BZ8hRuXdBtW8KKoSBpbD3QV6LN4Z7BUEZhl5R5KjKnipdryRP2VnLud1bzp3UJ%2BfY%2BDQvvc1u8lSOQWGqnjqCl5%2BJJy5jJwSq4eTUcLzHzcfYNF5DJIBUFtx5lmpyFMa9aJCbKDCIyIJcH%2FFnGbjD%2FgQfpkzvDDQS5PUtyodGoZ%2Fpk1BGc8gihr6Eb58YqE7KpiO25HIPIJGVTjLhZt9GKJ%2By387KLG2UexdbyXDweyjrEzeIs3eDDcMO6skj6jum4IsUZehBQyQq%2FP8bJWZutgRE%2BqSnzf2dIgF4XytasoJeq8UIb%2Bw7xO8L477uZp392NN%2FW0vejUzTLRjQcrFgXdmhqRxcePsY7jMA5i8yj2yE5ioaDKQzAuIFxWwXrbpFJWj8GfS09ni5CF6Pk2CojeJveAbX%2FqWeCl3fy4x5LnTPgtUDLsa183yFCGrn37%2FpIWKbRdRcPxG5Wyr55FCYq5eDLRuwGQ1F58S5a0GXZNeFdqQsjmGR6mPubSobfOBd8RKe3OsmiNJDJxXr60vdU5NgwCczlbk6oEC9kOUmwmdmpkxSzARY8MCEzw%2Blv4yveg7OJgHbG4kkyTsJU2Hh%2Ff4zmPGYRJAvl8j3e7WApiRO1q1eCsf7231sL%2B4KS86nHq25WmJLb6RBcbuTB8HLa8sgAmMbScT8H450VO%2BtAWeLf%2ByND%2BGLTqEiS66r706%2FysRlFtg8uToQnJ4S0WntWcUcEipOw30vVFi3udvaM0qzqfc2reKcUQWbAjf4oTp3wQUOH1bGxWqGtVvHJCI7tn2JldZqabaAd4zk7mYndscVTtSJe6Cqi8MHGxJbqRQBvkqZB7M5uYxt0%3D" url-ajax="../endtelmodfiles/mds" value="1">
+			<div class="col-12">
+				<div class="row border-bottom no_padd_marg">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-8 mt-2 mb-2 ">
+							<span class="h4 text-primary ml-1"><i class="fas fa-phone" id="icon_" 5=""></i>&nbsp;&nbsp;<span id="title_5">Telefones</span>&nbsp;&nbsp;<span id="badge_5" class="badge badge-primary">3</span></span>
+							</div>
+							<div class="col-4 mt-2t ext-right">
+															</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">				<div>
+				</div>
+				<div id="return_5">				<div class="row text-capitalize">
+					<div class="col-12">
+												<div class="mt-4" style="text-transform:capitalize">
+							<div class="row">
+								<div class="col-6 card ml-1">
+																			<div class="row ">
+																							<div class="col-12 border-bottom  pb-1 pt-2" style="padding-left: 0; margin-left: 0">
+													<div class="col-12 col-md-6 mb-1">
+																					<div class="">
+								<div class="row">
+									<div class="col-8 col-sm-6">
+										(79) 99120-3040									</div>
+									<div class="col-4 col-sm-6 d-print-none text-end">
+																						<div tlfid="bhst4IaHzbhKOOn02amYVoeP3o%2B6KfjmA%2BVWdPCDowTVXeF98xw%2FGdv4XT0ghWZr4Rasp5m%2Fz1R1ePDuQMAYxQ%3D%3D" id="82608848" data-id="0" class="">
+													
+													<div class="btn-group no-print" data-toggle="buttons" style="border:0">
+														<a href="#" data-like="true" class="btn btn-outline-success btn-sm like " id="like_82608848" style="border:0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Bom"><i class="fas fa-thumbs-up" style="font-size: 13px"></i></a>
+													</div>
+													<div class="btn-group " data-toggle="buttons" style="border:0">
+														<a href="#" data-dislike="true" class="btn btn-outline-danger btn-sm dislike" id="dislike_82608848" style="border:0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ruim"><i class="fas fa-thumbs-down" style="font-size: 13px"></i></a>
+													</div>
+
+
+																								</div>
+																				</div>
+								</div>
+							</div>
+																			</div>
+												</div>
+												<div class="col-12 border-bottom "></div>
+																							<div class="col-12 border-bottom bg-light pb-1 pt-2" style="padding-left: 0; margin-left: 0">
+													<div class="col-12 col-md-6 mb-1">
+																					<div class="">
+								<div class="row">
+									<div class="col-8 col-sm-6">
+										(79) 99951-2121									</div>
+									<div class="col-4 col-sm-6 d-print-none text-end">
+																						<div tlfid="bhst4IaHzbhKOOn02amYVoeP3o%2B6KfjmA%2BVWdPCDowTVXeF98xw%2FGTrnHCEMeFXXVNaQF7KqKJ1OsWgUz9kPFg%3D%3D" id="6188756" data-id="0" class="">
+													
+													<div class="btn-group no-print" data-toggle="buttons" style="border:0">
+														<a href="#" data-like="true" class="btn btn-outline-success btn-sm like " id="like_6188756" style="border:0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Bom"><i class="fas fa-thumbs-up" style="font-size: 13px"></i></a>
+													</div>
+													<div class="btn-group " data-toggle="buttons" style="border:0">
+														<a href="#" data-dislike="true" class="btn btn-outline-danger btn-sm dislike" id="dislike_6188756" style="border:0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ruim"><i class="fas fa-thumbs-down" style="font-size: 13px"></i></a>
+													</div>
+
+
+																								</div>
+																				</div>
+								</div>
+							</div>
+																			</div>
+												</div>
+												<div class="col-12 border-bottom bg-light"></div>
+																							<div class="col-12 border-bottom  pb-1 pt-2" style="padding-left: 0; margin-left: 0">
+													<div class="col-12 col-md-6 mb-1">
+																					<div class="">
+								<div class="row">
+									<div class="col-8 col-sm-6">
+										(79) 98817-5128									</div>
+									<div class="col-4 col-sm-6 d-print-none text-end">
+																						<div tlfid="bhst4IaHzbhKOOn02amYVoeP3o%2B6KfjmA%2BVWdPCDowQi81gTv91rUHZznjDhEBlOsm3TCvPjjNdXnGIW6wuHGw%3D%3D" id="379054123" data-id="0" class="">
+													
+													<div class="btn-group no-print" data-toggle="buttons" style="border:0">
+														<a href="#" data-like="true" class="btn btn-outline-success btn-sm like " id="like_379054123" style="border:0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Bom"><i class="fas fa-thumbs-up" style="font-size: 13px"></i></a>
+													</div>
+													<div class="btn-group " data-toggle="buttons" style="border:0">
+														<a href="#" data-dislike="true" class="btn btn-outline-danger btn-sm dislike" id="dislike_379054123" style="border:0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ruim"><i class="fas fa-thumbs-down" style="font-size: 13px"></i></a>
+													</div>
+
+
+																								</div>
+																				</div>
+								</div>
+							</div>
+																			</div>
+												</div>
+												<div class="col-12 border-bottom "></div>
+																					</div>
+																	</div>
+
+
+								<div class="col-5 card ms-auto mr-1">
+
+																	</div>
+
+							</div>
+						</div><br>
+										</div>
+				</div>
+
+				<script>
+					$('#mais').popover();
+					$('[data-toggle="tooltip"]').tooltip();
+
+					$('[data-like="true"]').click(function() {
+						likeFunction_v2(this)
+					});
+					$('[data-dislike="true"]').click(function() {
+						dislikeFunction_V2(this)
+					});
+
+
+					function jsSMS(modal, id) {
+
+						var Tdado = "data-ajax-" + id
+						var toSend = $("#btn" + id).attr(Tdado);
+
+						$("#alerts").html("Chegando:" + modal + ":::" + id);
+
+						$.post("../endtelmodfiles/consulta.endtel.modal.php", {
+								req: toSend,
+								type: modal
+							},
+
+							function(data) {
+								//console.log(data);
+								$("#SMSassinc").html(data);
+								$('#SMS').modal();
+
+							});
+
+					}
+
+					function bitClick(caller) {
+
+						var tlfId = caller.parentElement.getAttribute('tlfId');
+						var state = caller.parentElement.getAttribute("data-id");
+
+						var sttVal = caller.getAttribute(state);
+
+
+
+
+						//var chStatus = $(caller.parentElement).attr(state);
+
+						$('#alerts').html(state);
+						//alert(caller);
+						likeFunction_v2(caller);
+
+
+						//$(caller.parentElement).attr("data-id", 1);
+					};
+
+
+					/*
+					$(function () {
+					  $('#like').click(function () { likeFunction(this); });
+					  $('#dislike').click(function () { dislikeFunction(this);});
+
+					});	*/
+				</script>
+				
+
+<script>
+			$('#badge_5').addClass("badge badge-primary").html(3);
+		
+	//$('#badge_5').addClass("badge badge-primary").html('5');
+	//$('#badge_5').html('5');
+	//$('#icon_5').removeClass("da fa-envelope").addClass("fas fa-phone");//não está funcionando remover ou alterar a classe de icones.
+	
+</script>
+</div>
+			</div>
+		</div>
+		<script>
+(function($) {
+		$("#consulta_5").on("click","#refresh", function(){
+				var blocoID	= $(this).attr("data-id");
+			var blocoObj=$("#"+blocoID);
+			//console.log("Problemas no number call: " + blocoObj.attr('value'));
+
+			$("#"+blocoObj.attr('data-ret')).html('<div class="alert alert-danger text-center mt-5 mb-5" role="alert">Não foi possivel concluir o retorno do  modulo. Tente novamente dentro de algumas horas.</div>');
+			consulta("#"+blocoObj.attr('id'), blocoObj.attr('data-ret'), blocoObj.attr('data-ajax'), blocoObj.attr('value'), blocoObj.attr('url-ajax'), "ClickClackBoom")
+			//consulta("#"+blocoObj.attr('id'), blocoObj.attr('data-ret'), blocoObj.attr('data-ajax'), blocoObj.attr('value'), blocoObj.attr('url-ajax'), "ClickClackBoom")
+
+		});
+	})(jQuery);
+		</script>
+			<div class="row text-capitalize p-0 m-0 mt-2 Ret_table " id="consulta_6" data-autoload="1" data-ret="return_6" data-ajax="VQC2%2BIkWh4%2B8cFK4Uu6jsdnpQ94UYdqV2Sw0Bhu6PASdrQ7m1q5vo2yZ5SWFeHfyB5hiNAbGXk5LqHmJ1wjJkwyOyl2CrJTWHuUEmSCCZLpUgsMtNFjqnJBRYpvJZC5e8djqFxKbWsFt5ZPa6TXB4zcDstdcqX%2FQXhf9a7yfbfYW51QcCCxPRW5H%2FapL%2FhDjJ3vTEvht7SjR9U3%2BZMq18EdqvXHhQzqD%2FGHTeOevG7dLobXZFTipe%2F4KNfdnqchV8wKSgwtyY5mopESI%2BZ4n%2Faivz30wkB1o7fNNaqeh6jRrWlV0XGDWCTJp8zCOQ%2BHYYSiyqRo5woRdfssR3z2qqZHYHChXNJgKZN677f%2FKq4KUZxMKcOegcEyLBhbUf9sPbppTfaDWuTlXpahcpM7O5uNvJevwxP9OA8Xznj9naMeGZTpiGTiY02iVZrY0zv1raOnqXKqpT1zAK2OQI%2By3xzsq6pbAxUPknBTwB47JXu%2BmByj%2BzE%2B9oT7O36K7bpnsLV%2FNvSvgeVuCfw0HCkq5FACyTGh8yrOuXsDohg6GtURr%2BR6PzrpFfMPixLcsXKbbxmbzD5KE49D3vMCuRfle5Ve5p3Bo8fXdaQYQuikRO0nan8Tqoq9VcOV8WLfs%2Fn7mtks0e7I22E5XghqJUX29qBmxIaordgHsAgk7yeSYKNEtm0XjcDPSuB3usv7Orrq28ijO5wFPPpA31gEVKiOc9amifYbXDLQbOY5KqUMNgyY5wD7SkaqxF%2FLiIO%2FnLU6WZIHYopPzChSr22sW%2Fgr8jxXoNirtmJo%2FqAVJAR2oNAe7LyNx2aMwyCKRCjVzBPi8SkDXepKJg3bBybvNhSDvt41UN8QWvFtiUYZTPiox1iCgZ%2FJTTktQlHGiUq%2F%2BG41LOhV0DFNKNNJACBNVi8yioh%2Bi2Vx2U9ggA34yJ%2Fx2wEda9SteyMIlwro1X1NZeOQAC2BBTNQXy%2BTMIzSPDCP%2FCrGHtW6sQmff6dlRXdN4K9nwl%2FMfY%2F92gPXM2HUXnP4cUOXZzAkxRvMrN4TtOnyWsg%3D%3D" url-ajax="../endtelmodfiles/mds" value="1">
+			<div class="col-12">
+				<div class="row border-bottom no_padd_marg">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-8 mt-2 mb-2 ">
+							<span class="h4 text-primary ml-1"><i class="fas fa-envelope" id="icon_" 6=""></i>&nbsp;&nbsp;<span id="title_6">Endereço</span>&nbsp;&nbsp;<span id="badge_6" class="badge badge-primary">7</span></span>
+							</div>
+							<div class="col-4 mt-2t ext-right">
+															</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">				<div>
+				</div>
+				<div id="return_6">								<div class="row text-capitalize">
+									<div class="col-12">
+																						<div class="row border-bottom ">
+													<div class="col-12 col-sm-6 mt-4 my-1">
+														&nbsp;av alexandre alcino cond vida bella bl&nbsp;000000,&nbsp;&nbsp;aeroporto													</div>
+													<div class="col-12 col-sm-6 mt-4 my-1">
+														<div class="row ">
+															<div class="col-12 col-sm-4"></div>
+															<div class="col-6 col-sm-4 text-sm-center">49038-060</div>
+															<div class="col-6 col-sm-4 text-right d-print-none">
+																<a href="http://maps.google.com.br/maps?q=+AV+ALEXANDRE+ALCINO+COND+VIDA+BELLA+BL+0,,,49038060" target="_blank" class="btn btn-outline-primary btn-sm " style="border:0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ver mapa"><i class="fas fa-map" style="font-size: 15px"></i></a>
+																<button type="button" id="btn0" class="btn btn-outline-primary btn-sm " data-ajax-0="aOZJwyf1vyQDjWsoX2zPaphgqEuSF1pteAxx40zSxcmDd5tl2TpTvek%2BF9rRHhnuw8L5FamiaVCkJ45NWdnWJ58Cx9TN0ABXIEFArayFw3zCB8hKbzz9OcaWwfvecuiP%2BuByJaEZ5IGOP5VtPpKWAibOP1B%2Fo76RiftvEhGETzTSwfqguT2AmmydNrclc2FbYKCKpT%2B6EoLNbL%2BRnT6S8IUyiI1n6IzAhd2IQZpgx1%2Fk529GYuGlyIlgGaXYxqYTo0Ur9bySTC77KAaj4piQ2K%2FvK35fKM%2BAD8qfZvxzd5DbkDNrlwZvZO%2FcOHK5Z7C4Ysgcr35c0rcYVZ0xPQbK2sHaeHatpYS%2FapJGKCITNXHg692x4mp8wQ%3D%3D" onclick="jsVizinhos('vEnds','0')" style="border:0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Vizinhos"><i class="fas fa-plus" style="font-size: 15px"></i></button>
+															</div>
+
+														</div>
+													</div>
+																									</div>
+																						<div class="row border-bottom bg-light">
+													<div class="col-12 col-sm-6 mt-4 my-1">
+														&nbsp;av alexandre alcino cond vida bella bl&nbsp;0,&nbsp;apt 304&nbsp;aeroporto													</div>
+													<div class="col-12 col-sm-6 mt-4 my-1">
+														<div class="row ">
+															<div class="col-12 col-sm-4"></div>
+															<div class="col-6 col-sm-4 text-sm-center">49038-060</div>
+															<div class="col-6 col-sm-4 text-right d-print-none">
+																<a href="http://maps.google.com.br/maps?q=+AV+ALEXANDRE+ALCINO+COND+VIDA+BELLA+BL+0,,,49038060" target="_blank" class="btn btn-outline-primary btn-sm " style="border:0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ver mapa"><i class="fas fa-map" style="font-size: 15px"></i></a>
+																<button type="button" id="btn1" class="btn btn-outline-primary btn-sm " data-ajax-1="aOZJwyf1vySFnnb8BwrIRfJVhSG8l1Rtn8%2BeKVjIOL6PxqcP9Yoo2mGyYBe5DRfQerbOgwn27X6zaSPTL7NGevMfDKwi90ZilURaH%2Bsil3Bp8sTPNdGU8wDSibUwLXh8TfuOmQRTfKVLasP4LhV%2FvrkAYOOk6y3MzIz972h15Cbw%2BCt%2BSPJg6GHL%2FN66LYAUDMd2RcwmYr9THwStG%2BemuVK5xXGia5ZmnyZHzkKneVKJC4LfQth2InZgJPFx4kqQOuV%2FKIDxn5EE8vQJz3XtxI%2BZ9RHRBb9navM42DUaulaQpkBTI59sqlJMo7JUZ4VGuGSwn1WUpvujLhx1lf1YceCvBD8G%2FttUsHua1kIUYa81t4NA2OaA7A%3D%3D" onclick="jsVizinhos('vEnds','1')" style="border:0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Vizinhos"><i class="fas fa-plus" style="font-size: 15px"></i></button>
+															</div>
+
+														</div>
+													</div>
+																									</div>
+																						<div class="row border-bottom ">
+													<div class="col-12 col-sm-6 mt-4 my-1">
+														&nbsp;al alcino&nbsp;000150,&nbsp;.:bl.1 apt.3&nbsp;santa maria													</div>
+													<div class="col-12 col-sm-6 mt-4 my-1">
+														<div class="row ">
+															<div class="col-12 col-sm-4">aracaju/SE</div>
+															<div class="col-6 col-sm-4 text-sm-center">49044-090</div>
+															<div class="col-6 col-sm-4 text-right d-print-none">
+																<a href="http://maps.google.com.br/maps?q=+AL+ALCINO+150,,SE,49044090" target="_blank" class="btn btn-outline-primary btn-sm " style="border:0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ver mapa"><i class="fas fa-map" style="font-size: 15px"></i></a>
+																<button type="button" id="btn2" class="btn btn-outline-primary btn-sm " data-ajax-2="aOZJwyf1vyTrCkXXuaCMMFA9M0ZHIlTTSkQKuWggQFHSSaFvhbJcRoXOmIgJ6tAb7UqXIsb3dynCoqDWQVfkbZCiQmjtPLPJ0Ll8m5vEmXQt%2FnJl3ywQZPPVVClPz%2FqT9wDzDpNcO1tr9SJCqayFR%2FYYjd8pjID60bL%2BvL%2Fwsl3y4i5GoyrcHCTexOcqCDu6ArWYcanQyUA3Di1H6mhf%2Bxivy3J0gAktWBgze6t1r%2FbWELMlJCQsI%2FMSgGhTYSB%2FNOFnsIjOvXL9zX2jU2OVozkgMedZrGHBsRV6eRNtwguBUPmpIxpytnoLRM1oaHdBOHIO4NiyyA%2Bw2SAeQcLIW1osgRuAYt4Sj2wk9I6E0wo%3D" onclick="jsVizinhos('vEnds','2')" style="border:0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Vizinhos"><i class="fas fa-plus" style="font-size: 15px"></i></button>
+															</div>
+
+														</div>
+													</div>
+																									</div>
+																						<div class="row border-bottom bg-light">
+													<div class="col-12 col-sm-6 mt-4 my-1">
+														&nbsp;tr rapitinga&nbsp;76,&nbsp;ap&nbsp;ponto novo													</div>
+													<div class="col-12 col-sm-6 mt-4 my-1">
+														<div class="row ">
+															<div class="col-12 col-sm-4">aracaju/SE</div>
+															<div class="col-6 col-sm-4 text-sm-center">49047-430</div>
+															<div class="col-6 col-sm-4 text-right d-print-none">
+																<a href="http://maps.google.com.br/maps?q=+TR+RAPITINGA+76,,SE,49047430" target="_blank" class="btn btn-outline-primary btn-sm " style="border:0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ver mapa"><i class="fas fa-map" style="font-size: 15px"></i></a>
+																<button type="button" id="btn3" class="btn btn-outline-primary btn-sm " data-ajax-3="aOZJwyf1vyQzGcdOMprnB0TS4XigjieAqOSXOs0SNMw8JvfEpLdo%2Bv8L8%2F%2BEXA%2BlYwUnB%2Ff5BsPYdVDaL594BCh3XnfrcT%2FVZiF6Cdwb5Gk72%2BAcgH8KPY22rNHrDUMCfSkTiHcToyqVCAhC43%2BzK6bJ0iSy3q%2F1bWWPt%2FAohKPGSopoKN%2FRsTdBD1Z2TiFeOYcvF1o5hLE7k4zbh%2FDE7Hh%2F7iXcxAoAZwy1szSR4qKH1YuOH4gNIlOC0S%2BjmShOu9bKe3dKC0hEQqG5FUobuOS7T%2BUi2rci38bbIC1wo%2BWCcY9ZI5ju%2BnYihC9tPrhYsDbFrMTv6PcAwkL5BeGoDy1e%2BDgBq8LS" onclick="jsVizinhos('vEnds','3')" style="border:0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Vizinhos"><i class="fas fa-plus" style="font-size: 15px"></i></button>
+															</div>
+
+														</div>
+													</div>
+																									</div>
+																						<div class="row border-bottom ">
+													<div class="col-12 col-sm-6 mt-4 my-1">
+														&nbsp;rosalina r&nbsp;499,&nbsp;&nbsp;farolandia													</div>
+													<div class="col-12 col-sm-6 mt-4 my-1">
+														<div class="row ">
+															<div class="col-12 col-sm-4"></div>
+															<div class="col-6 col-sm-4 text-sm-center">49000-000</div>
+															<div class="col-6 col-sm-4 text-right d-print-none">
+																<a href="http://maps.google.com.br/maps?q=+ROSALINA+R+499,,,49000000" target="_blank" class="btn btn-outline-primary btn-sm " style="border:0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ver mapa"><i class="fas fa-map" style="font-size: 15px"></i></a>
+																<button type="button" id="btn4" class="btn btn-outline-primary btn-sm " data-ajax-4="aOZJwyf1vyQ7hYaqB%2FK9UKEMuBNJpmAmcs7Sb6Hka%2Bj3GLGaQdAfQejfpalTsLyrN%2BBjtm9KlL5EshM%2F3Ob9wTzzHU%2FLGrAWxHcy8Mm6I78LhOr4OioYmnsDa%2B9sJI1FNwu8m%2F4TPj3tRJN55zVVjFDpFlawcpj37boTeMbUIZfbWx9pcZxI1kBFDjh769l9u3GJJ5cInlh%2B2PXPmTh%2Bxrm0I4YUw89L6T9am2v%2FoH4oORMyCBmOV0MPOIeh1j14dlEt%2FIdezt%2FUfFX9tbMH%2BlEgWRePBbIJGeI6p6pNoLsktmnFCt1%2BEe%2F9VAjh1qRw8JSpiaTTI0M%3D" onclick="jsVizinhos('vEnds','4')" style="border:0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Vizinhos"><i class="fas fa-plus" style="font-size: 15px"></i></button>
+															</div>
+
+														</div>
+													</div>
+																									</div>
+																						<div class="row border-bottom bg-light">
+													<div class="col-12 col-sm-6 mt-4 my-1">
+														&nbsp;r gutemberg chagas&nbsp;169,&nbsp;c&nbsp;inacio barbosa													</div>
+													<div class="col-12 col-sm-6 mt-4 my-1">
+														<div class="row ">
+															<div class="col-12 col-sm-4">aracaju/SE</div>
+															<div class="col-6 col-sm-4 text-sm-center">49040-780</div>
+															<div class="col-6 col-sm-4 text-right d-print-none">
+																<a href="http://maps.google.com.br/maps?q=+R+GUTEMBERG+CHAGAS+169,,SE,49040780" target="_blank" class="btn btn-outline-primary btn-sm " style="border:0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ver mapa"><i class="fas fa-map" style="font-size: 15px"></i></a>
+																<button type="button" id="btn5" class="btn btn-outline-primary btn-sm " data-ajax-5="aOZJwyf1vyQ7hYaqB%2FK9UMt%2F3QzZBDsxucu4JaVuguGSw3q6JkbQoy8lku1ZstqkUSsYKOWTOS3qNDrtrT2%2BpXhkL2iYgvD8%2FvKAf96e6GayLEqUrfoVZOkKSoPgLwIHNNUOyvVAdW3J%2FuO1ZCVxgAB6LWTbyvgQLv5OmsD3opJrU0B3vgLEVZRtO5AXDHpTLTRTd1XTcd06KnoUqHGPNtIKN2P1cQ1ONgDrE%2FoBMQqtb5P7%2FHBHGaugNSpx6go%2BkkmrGKfz8yD9eVkjqMk2SLIFo%2FJtruikbtcTtmmXLOksY4q4s4cZiqG0HLJa%2BTy8D%2BcOWTYsLtbYV8f3qqRuHAik3LCBLIaqE40c8cUd334%3D" onclick="jsVizinhos('vEnds','5')" style="border:0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Vizinhos"><i class="fas fa-plus" style="font-size: 15px"></i></button>
+															</div>
+
+														</div>
+													</div>
+																									</div>
+																						<div class="row border-bottom ">
+													<div class="col-12 col-sm-6 mt-4 my-1">
+														&nbsp;r armando barros&nbsp;80,&nbsp;ap 403&nbsp;luzia													</div>
+													<div class="col-12 col-sm-6 mt-4 my-1">
+														<div class="row ">
+															<div class="col-12 col-sm-4">aracaju/SE</div>
+															<div class="col-6 col-sm-4 text-sm-center">49045-080</div>
+															<div class="col-6 col-sm-4 text-right d-print-none">
+																<a href="http://maps.google.com.br/maps?q=+R+ARMANDO+BARROS+80,,SE,49045080" target="_blank" class="btn btn-outline-primary btn-sm " style="border:0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ver mapa"><i class="fas fa-map" style="font-size: 15px"></i></a>
+																<button type="button" id="btn6" class="btn btn-outline-primary btn-sm " data-ajax-6="aOZJwyf1vyQ7hYaqB%2FK9UNxZIW3lrKzziia2BUSrelzSvBQQvWG%2F3QbpQV2fS5be2hqUX0CO14ewxP1eEtBtzqsoH3ofNyiYNoRsy9M%2FrIgFNg1eg9ELEhGB%2B3D52DbUFrIaB6SbLy12zK6%2FlJSbmmtIAs9cfLZ2b9qyBh2Hd2THMnQP5wrtjHYk%2B%2BZRvHktlg0uSPVNPzjC91NqUCBbfW5E%2B%2FbV47TCxFDbdT7DCETHRFnfqSu3k6VhQuS5ENZQZGwWHMzf%2FdOWlveESmzcCzHgJdgdBLNf8pahqqNGgFU%2Fp69f6Q8U3QklOh2KXkmgGytc5l%2FkIw1ZV3ZkCviwVhqT5oDyIJnn" onclick="jsVizinhos('vEnds','6')" style="border:0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Vizinhos"><i class="fas fa-plus" style="font-size: 15px"></i></button>
+															</div>
+
+														</div>
+													</div>
+																									</div>
+																			</div>
+								</div>
+								<br>
+
+								<script>
+									$('[data-toggle="tooltip"]').tooltip();
+
+									function jsVizinhos(modal, id) {
+
+										var Tdado = "data-ajax-" + id
+										var toSend = $("#btn" + id).attr(Tdado);
+
+
+										$.post("../endtelmodfiles/consulta.endtel.modal.php", {
+												req: toSend,
+												type: modal
+											},
+
+											function(data) {
+												//alert(data);
+												$("#viz").html(data);
+												$('#vizinhos').modal();
+
+											});
+
+									}
+
+									function loadDynamicContentModal(modal, id) {
+
+										var Tdado = "data-ajax-" + id
+										var toSend = $("#btn" + id).attr(Tdado);
+										var options = {
+											modal: false,
+											height: 400,
+											width: 700,
+											show: true
+										};
+
+
+
+										$.post("../endtelmodfiles/consulta.endtel.modal.php", {
+												req: toSend,
+												type: modal
+											},
+
+											function(data) {
+												//alert(data);
+												$("#modal-din").html(data);
+												$('#ends').modal();
+
+											});
+										/**/
+									} //fecha function
+								</script>
+
+							
+
+<script>
+			$('#badge_6').addClass("badge badge-primary").html(7);
+		
+	//$('#badge_6').addClass("badge badge-primary").html('5');
+	//$('#badge_6').html('5');
+	//$('#icon_6').removeClass("da fa-envelope").addClass("fas fa-phone");//não está funcionando remover ou alterar a classe de icones.
+	
+</script>
+</div>
+			</div>
+		</div>
+		<script>
+(function($) {
+		$("#consulta_6").on("click","#refresh", function(){
+				var blocoID	= $(this).attr("data-id");
+			var blocoObj=$("#"+blocoID);
+			//console.log("Problemas no number call: " + blocoObj.attr('value'));
+
+			$("#"+blocoObj.attr('data-ret')).html('<div class="alert alert-danger text-center mt-5 mb-5" role="alert">Não foi possivel concluir o retorno do  modulo. Tente novamente dentro de algumas horas.</div>');
+			consulta("#"+blocoObj.attr('id'), blocoObj.attr('data-ret'), blocoObj.attr('data-ajax'), blocoObj.attr('value'), blocoObj.attr('url-ajax'), "ClickClackBoom")
+			//consulta("#"+blocoObj.attr('id'), blocoObj.attr('data-ret'), blocoObj.attr('data-ajax'), blocoObj.attr('value'), blocoObj.attr('url-ajax'), "ClickClackBoom")
+
+		});
+	})(jQuery);
+		</script>
+		  <p></p>
+	</div>
+</div>
+</div>
+
+<div id="rodapeNotes"></div>
+</div>
+</div>
+
+	<div class="page-wrapper">
+        <!-- WELCOME-->
+        <section class="welcome p-t-10">
+			<div class="container">
+			<!--<div class="card-header d-print-none">
+				<h4>Consulta <span>Farmácia JM</span></h4>
+			</div>-->
+				<div class="card-body">
+				</div>
+			</div>
+		</section>
+	</div>
+
+
+
+
+<!-- modal large -->
+<div class="modal fade" id="md_processos" tabindex="-1" role="dialog" aria-labelledby="ProssDetails" aria-hidden="true">
+	<div class="modal-dialog modal-lg  modal-dialog-centered" style="max-width: 95%!important;" role="document">
+		<div class="modal-content" id="print_order">
+			<div class="modal-header">
+				<h5 class="modal-title" id="ProssDetails_1">Detalhes do Processo <div id="Nprocess"></div></h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+				<div class=" text-right">
+				<button type="button" id="md_print_r" data-ajax="?" class="btn btn-default" onclick="mPrint()">Imprimir</button>
+				</div>			
+			<div class="modal-body mt-0 pt-0">
+				<div id="proc" class=""></div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" id="md_print_r_2" data-ajax="?" class="btn btn-default print" onclick="mPrint()">Imprimir</button>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end modal large -->
+<script src="js/main.js"></script>
+		</body><!-- Jquery JS--></html>
