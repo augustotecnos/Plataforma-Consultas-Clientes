@@ -1,0 +1,73 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: customer_db_debug
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: customer_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data_debug:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - backend_debug
+
+  redis:
+    image: redis:7-alpine
+    container_name: customer_cache_debug
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data_debug:/data
+    command: redis-server --appendonly yes --loglevel debug
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - backend_debug
+
+  api:
+    build:
+      context: .
+      target: development
+    container_name: customer_api_debug
+    ports:
+      - "8000:8000"
+      - "5678:5678"  # Porta para debug Python
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      - POSTGRES_SERVER=postgres
+      - REDIS_HOST=redis
+      - DEBUG=True
+      - PYTHONPATH=/app
+    volumes:
+      - ./src:/app/src
+      - ./tests:/app/tests
+    command: >
+      sh -c "pip install debugpy && 
+             python -m debugpy --listen 0.0.0.0:5678 -m uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload"
+    networks:
+      - backend_debug
+
+volumes:
+  postgres_data_debug:
+  redis_data_debug:
+
+networks:
+  backend_debug:
+    driver: bridge

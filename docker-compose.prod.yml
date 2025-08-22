@@ -1,0 +1,104 @@
+version: '3.8'
+
+services:
+  # Backend Services
+  postgres:
+    image: postgres:15-alpine
+    container_name: customer_db_prod
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-customer_db}
+    volumes:
+      - postgres_data_prod:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres}"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - customer_network_prod
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: '0.5'
+
+  redis:
+    image: redis:7-alpine
+    container_name: customer_cache_prod
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    volumes:
+      - redis_data_prod:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - customer_network_prod
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: '0.25'
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: customer_api_prod
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      - POSTGRES_SERVER=postgres
+      - REDIS_HOST=redis
+      - DEBUG=False
+    env_file:
+      - ./backend/.env.prod
+    networks:
+      - customer_network_prod
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: '0.5'
+
+  # Frontend Service
+  frontend:
+    build:
+      context: ./frontend
+      target: production
+    container_name: customer_portal_prod
+    ports:
+      - "80:80"
+    environment:
+      - REACT_APP_API_URL=${REACT_APP_API_URL:-http://api:8000}
+    env_file:
+      - ./frontend/.env.prod
+    depends_on:
+      - api
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: '0.25'
+    networks:
+      - customer_network_prod
+
+volumes:
+  postgres_data_prod:
+  redis_data_prod:
+
+networks:
+  customer_network_prod:
+    driver: bridge

@@ -1,0 +1,39 @@
+# FastAPI and web framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# Database
+sqlalchemy==2.0.23
+psycopg2-binary==2.9.9
+alembic==1.12.1
+
+# Redis
+redis==5.0.1
+aioredis==2.0.1
+
+# Authentication & Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-dotenv==1.0.0
+
+# Data validation
+pydantic==2.5.0
+email-validator==2.1.0
+
+# Export functionality
+pandas==2.1.4
+openpyxl==3.1.2
+reportlab==4.0.7
+
+# Async support
+asyncpg==0.29.0
+asyncio-mqtt==0.16.1
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+httpx==0.25.2
+
+# Development
+python-decouple==3.8
