@@ -59,8 +59,7 @@ services:
       - ./backend/src:/app/src
       - ./backend/tests:/app/tests
     command: >
-      sh -c "pip install debugpy && 
-             python -m debugpy --listen 0.0.0.0:5678 -m uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload"
+      sh -c "pip install debugpy && python -m debugpy --listen 0.0.0.0:5678 -m uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload"
     networks:
       - customer_network_debug
 
@@ -84,8 +83,7 @@ services:
     stdin_open: true
     tty: true
     command: >
-      sh -c "npm install &&
-             npm start"
+      sh -c "npm install && npm start"
     depends_on:
       - api
     networks:
