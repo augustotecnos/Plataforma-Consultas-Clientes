@@ -7,7 +7,7 @@ class ClientBase(BaseModel):
     cpf: str = Field(..., description="CPF do cliente")
     nome_completo: str = Field(..., min_length=3, max_length=255, description="Nome completo do cliente")
     data_nascimento: Optional[date] = Field(None, description="Data de nascimento")
-    sexo: Optional[str] = Field(None, regex="^[MF]$", description="Sexo (M/F)")
+    sexo: Optional[str] = Field(None, pattern="^[MF]$", description="Sexo (M/F)")
     nome_mae: Optional[str] = Field(None, max_length=255, description="Nome da mãe")
     nome_pai: Optional[str] = Field(None, max_length=255, description="Nome do pai")
     email: Optional[EmailStr] = Field(None, description="Email do cliente")
@@ -19,7 +19,7 @@ class ClientBase(BaseModel):
     complemento: Optional[str] = Field(None, max_length=255, description="Complemento")
     bairro: Optional[str] = Field(None, max_length=100, description="Bairro")
     cidade: Optional[str] = Field(None, max_length=100, description="Cidade")
-    uf: Optional[str] = Field(None, regex="^[A-Z]{2}$", description="UF (estado)")
+    uf: Optional[str] = Field(None, pattern="^[A-Z]{2}$", description="UF (estado)")
     ativo: bool = Field(True, description="Status do cliente")
     
     @validator('cpf')
@@ -38,7 +38,7 @@ class ClientCreate(ClientBase):
 class ClientUpdate(BaseModel):
     nome_completo: Optional[str] = Field(None, min_length=3, max_length=255)
     data_nascimento: Optional[date] = None
-    sexo: Optional[str] = Field(None, regex="^[MF]$")
+    sexo: Optional[str] = Field(None, pattern="^[MF]$")
     nome_mae: Optional[str] = Field(None, max_length=255)
     nome_pai: Optional[str] = Field(None, max_length=255)
     email: Optional[EmailStr] = None
@@ -50,7 +50,7 @@ class ClientUpdate(BaseModel):
     complemento: Optional[str] = Field(None, max_length=255)
     bairro: Optional[str] = Field(None, max_length=100)
     cidade: Optional[str] = Field(None, max_length=100)
-    uf: Optional[str] = Field(None, regex="^[A-Z]{2}$")
+    uf: Optional[str] = Field(None, pattern="^[A-Z]{2}$")
     ativo: Optional[bool] = None
     
     @validator('uf')
@@ -91,6 +91,6 @@ class PaginatedResponse(BaseModel):
         from_attributes = True
 
 class ExportFormat(BaseModel):
-    format: str = Field(..., regex="^(excel|pdf|csv)$", description="Formato de exportação")
+    format: str = Field(..., pattern="^(excel|pdf|csv)$", description="Formato de exportação")
     filters: ClientSearchFilters = Field(..., description="Filtros para exportação")
     fields: Optional[List[str]] = Field(None, description="Campos específicos para exportar")

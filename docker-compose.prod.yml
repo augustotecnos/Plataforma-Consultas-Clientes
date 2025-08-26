@@ -5,10 +5,8 @@ services:
   postgres:
     image: postgres:15-alpine
     container_name: customer_db_prod
-    environment:
-      POSTGRES_USER: ${POSTGRES_USER:-postgres}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
-      POSTGRES_DB: ${POSTGRES_DB:-customer_db}
+    env_file:
+      - ./backend/.env.prod
     volumes:
       - postgres_data_prod:/var/lib/postgresql/data
     healthcheck:
