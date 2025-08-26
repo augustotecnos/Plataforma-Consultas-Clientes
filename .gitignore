@@ -30,3 +30,4 @@ secure_credential.xml
 PAGINAS_DADOS_CLIENTES/
 PAGINAS_DADOS_CLIENTES/
 node_modules/
+build/
