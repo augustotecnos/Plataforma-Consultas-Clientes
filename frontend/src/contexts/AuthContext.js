@@ -3,7 +3,8 @@ import axios from 'axios';
 
 const AuthContext = createContext();
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000/api/v1';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+const REACT_APP_API_VERSION = process.env.REACT_APP_API_VERSION || '/api/v1';
 
 export const useAuth = () => {
   const context = useContext(AuthContext);
@@ -30,7 +31,7 @@ export const AuthProvider = ({ children }) => {
 
   const fetchUser = async () => {
     try {
-      const response = await axios.get(`${API_BASE_URL}/auth/me`);
+      const response = await axios.get(`${API_BASE_URL}${REACT_APP_API_VERSION}/auth/me`);
       setUser(response.data);
     } catch (error) {
       console.error('Error fetching user:', error);
@@ -43,7 +44,7 @@ export const AuthProvider = ({ children }) => {
   const login = async (email, password) => {
     try {
       setError(null);
-      const response = await axios.post(`${API_BASE_URL}/auth/login-json`, {
+      const response = await axios.post(`${API_BASE_URL}${REACT_APP_API_VERSION}/auth/login-json`, {
         email,
         password
       });

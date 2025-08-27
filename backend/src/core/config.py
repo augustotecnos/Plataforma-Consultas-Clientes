@@ -36,6 +36,10 @@ class Settings(BaseSettings):
     
     # Export Settings
     MAX_EXPORT_RECORDS: int = 50000
+
+    # Initial Admin User
+    ADMIN_EMAIL: str = "admin@example.com"
+    ADMIN_PASSWORD: str = "admin"
     
     class Config:
         env_file = ".env"

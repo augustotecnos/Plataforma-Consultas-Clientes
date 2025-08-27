@@ -55,7 +55,7 @@ services:
       - DEBUG=True
     volumes:
       - ./backend/src:/app/src
-    command: uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
+    command: bash -c "python src/initial_data.py && uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload"
     networks:
       - customer_network
 
@@ -73,7 +73,7 @@ services:
       - frontend_modules_debug:/app/node_modules
     environment:
       - CHOKIDAR_USEPOLLING=true
-      - REACT_APP_API_URL=http://localhost:8000
+      - REACT_APP_API_URL=http://10.113.1.240:8000
     stdin_open: true
     tty: true
     depends_on:
